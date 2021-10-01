@@ -1,74 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
-      rel="stylesheet"
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI with API</title>
+    
+    <link rel="stylesheet" 
+    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""
     />
-    <script src="main.js" defer></script>
-    <style>
-      body {
-  margin: 0;
-  padding: 0;
-}
+    
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin="">
+  </script>
 
-h2,
-h3 {
-  margin: 10px;
-  font-size: 18px;
-}
+  <style>
+    .legend {
+    line-height: 18px;
+    color: #555;
+    }
+    .legend i {
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 8px;
+    opacity: 1;
+    }
 
-h3 {
-  font-size: 16px;
-}
+  </style>
 
-p {
-  margin: 10px;
-}
+</head>
 
-/**
-* Create a position for the map
-* on the page */
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-/**
-* Set rules for how the map overlays
-* (information box and legend) will be displayed
-* on the page. */
-.map-overlay {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background:white;
-  margin-right: 20px;
-  font-family: Arial, sans-serif;
-  overflow: auto;
-  border-radius: 3px;
-}
-
-#features {
-  top: 0;
-  height: 100px;
-  margin-top: 20px;
-  width: 250px;
-}
-
-    </style>
-
-    <title>Google Maps Clone</title>
-  </head>
   <body>
-    <div id="map"></div>
-    <div class='map-overlay' id='features'><h2>Delhi Ward Details</h2><div id='pd'><p>Hover over a colored region!</p></div></div>
+    <div id="mapid" style="min-height: 100vh;"></div>
   </body>
+
+  <script type="text/javascript" src="main.js"></script>
+
 </html>
